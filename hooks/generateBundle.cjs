@@ -1,6 +1,6 @@
-module.exports = (icons, command) => {
+module.exports = (icons, state) => {
   return async function generateBundle() {
-    if (command !== 'build') return
+    if (state.command !== 'build') return
 
     const { images, files } = await icons
 

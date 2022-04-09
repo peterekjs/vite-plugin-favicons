@@ -3,18 +3,20 @@ const outputMiddleware = require(__dirname + '/lib/outputMiddleware.cjs')
 
 function createFaviconsPlugin(src) {
   const icons = generateFavicons(src)
-  let command
+  const state = {
+    command: 'uknown'
+  }
 
   return {
     name: 'favicons',
 
     async configResolved(config) {
-      command = config.command
+      state.command = config.command
     },
 
     configureServer: require('./hooks/configureServer.cjs')(icons, outputMiddleware),
     transformIndexHtml: require('./hooks/transformIndexHtml.cjs')(icons),
-    generateBundle: require('./hooks/generateBundle.cjs')(icons, command),
+    generateBundle: require('./hooks/generateBundle.cjs')(icons, state),
   }
 }
 
