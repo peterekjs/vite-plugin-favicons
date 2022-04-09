@@ -1,6 +1,4 @@
-const outputMiddleware = require('../lib/outputMiddleware.cjs')
-
-module.exports = (icons) => {
+module.exports = (icons, outputMiddleware) => {
   return async function configureServer(server) {
     const { images, files } = await icons
     const mw = server.middlewares

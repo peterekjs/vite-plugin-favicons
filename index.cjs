@@ -1,4 +1,5 @@
-const generateFavicons = require('./lib/generateFavicons.cjs')
+const generateFavicons = require(__dirname + '/lib/generateFavicons.cjs')
+const outputMiddleware = require(__dirname + '/lib/outputMiddleware.cjs')
 
 function createFaviconsPlugin(src) {
   const icons = generateFavicons(src)
@@ -11,7 +12,7 @@ function createFaviconsPlugin(src) {
       command = config.command
     },
 
-    configureServer: require('./hooks/configureServer.cjs')(icons),
+    configureServer: require('./hooks/configureServer.cjs')(icons, outputMiddleware),
     transformIndexHtml: require('./hooks/transformIndexHtml.cjs')(icons),
     generateBundle: require('./hooks/generateBundle.cjs')(icons, command),
   }
