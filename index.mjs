@@ -3,8 +3,8 @@ import generateBundle from './hooks/generateBundle.cjs'
 import transformIndexHtml from './hooks/transformIndexHtml.cjs'
 import generateFavicons from './lib/generateFavicons.cjs'
 
-function createFaviconsPlugin(src) {
-  const icons = generateFavicons(src)
+function createFaviconsPlugin(src, options) {
+  const icons = generateFavicons(src, options)
   let command
 
   return {

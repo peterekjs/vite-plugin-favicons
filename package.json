@@ -43,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/peterekjs/vite-plugin-favicons/issues"
   },
-  "homepage": "https://github.com/peterekjs/vite-plugin-favicons#readme"
+  "homepage": "https://github.com/peterekjs/vite-plugin-favicons#readme",
+  "devDependencies": {
+    "@types/favicons": "^6.2.2"
+  }
 }

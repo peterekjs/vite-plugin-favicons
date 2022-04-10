@@ -1,8 +1,8 @@
 const generateFavicons = require(__dirname + '/lib/generateFavicons.cjs')
 const outputMiddleware = require(__dirname + '/lib/outputMiddleware.cjs')
 
-function createFaviconsPlugin(src) {
-  const icons = generateFavicons(src)
+function createFaviconsPlugin(src, options) {
+  const icons = generateFavicons(src, options)
   const state = {
     command: 'uknown'
   }
