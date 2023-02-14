@@ -31,7 +31,7 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "favicons": "^7.0.0-beta.3"
+    "favicons": "^7.1.0"
   },
   "peerDependencies": {
     "vite": "^2.9.1"
