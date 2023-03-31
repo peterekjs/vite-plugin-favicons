@@ -31,10 +31,10 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "favicons": "^7.1.0"
+    "favicons": "^7.1.1"
   },
   "peerDependencies": {
-    "vite": "^2.9.1"
+    "vite": "^4.2.1"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,6 @@
   },
   "homepage": "https://github.com/peterekjs/vite-plugin-favicons#readme",
   "devDependencies": {
-    "@types/favicons": "^6.2.2"
+    "@types/favicons": "^7.0.0"
   }
 }
