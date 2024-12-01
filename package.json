@@ -33,8 +33,11 @@
   "dependencies": {
     "favicons": "^7.1.5"
   },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  },
   "peerDependencies": {
-    "vite": "^5.0.12"
+    "vite": ">=5.0.0"
   },
   "repository": {
     "type": "git",
@@ -43,8 +46,5 @@
   "bugs": {
     "url": "https://github.com/peterekjs/vite-plugin-favicons/issues"
   },
-  "homepage": "https://github.com/peterekjs/vite-plugin-favicons#readme",
-  "devDependencies": {
-    "@types/favicons": "^7.0.0"
-  }
+  "homepage": "https://github.com/peterekjs/vite-plugin-favicons#readme"
 }
