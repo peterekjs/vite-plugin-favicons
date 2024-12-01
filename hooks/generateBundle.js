@@ -1,4 +1,4 @@
-module.exports = (icons, state) => {
+export default (icons, state) => {
   return async function generateBundle() {
     if (state.command !== 'build') return
 

@@ -1,8 +1,8 @@
-const configureServer = require(__dirname + '/hooks/configureServer.js')
-const generateBundle = require(__dirname + './hooks/generateBundle.js')
-const transformIndexHtml = require(__dirname + './hooks/transformIndexHtml.js')
-const generateFavicons = require(__dirname + '/lib/generateFavicons.js')
-const outputMiddleware = require(__dirname + '/lib/outputMiddleware.js')
+import configureServer from './hooks/configureServer.js'
+import generateBundle from './hooks/generateBundle.js'
+import transformIndexHtml from './hooks/transformIndexHtml.js'
+import generateFavicons from './lib/generateFavicons.js'
+import outputMiddleware from './lib/outputMiddleware.js'
 
 function createFaviconsPlugin(src, options) {
   const icons = generateFavicons(src, options)
@@ -23,4 +23,4 @@ function createFaviconsPlugin(src, options) {
   }
 }
 
-module.exports = createFaviconsPlugin
+export default createFaviconsPlugin

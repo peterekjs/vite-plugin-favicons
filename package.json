@@ -24,12 +24,24 @@
     "hooks/*",
     "lib/*"
   ],
-  "main": "index.cjs",
-  "module": "index.mjs",
-  "types": "index.d.ts",
   "engines": {
     "node": ">=18.0.0"
   },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.cjs",
+      "default": "./index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": ["./index.d.ts"]
+    }
+  },
+  "types": "index.d.ts",
   "dependencies": {
     "favicons": "^7.1.5"
   },

@@ -1,4 +1,4 @@
-module.exports = (icons, outputMiddleware) => {
+export default (icons, outputMiddleware) => {
   return async function configureServer(server) {
     const { images, files } = await icons
     const mw = server.middlewares
